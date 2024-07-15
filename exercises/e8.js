@@ -5,7 +5,7 @@ import { data } from "../data/data";
 // Return example: 'Planet Name'
 
 export function findPlanetNameByMoon(data, moonName) {
-  // Your code goes here...
+  return data.planets.filter(planet => planet.moons !== undefined).find(planet => planet.moons.includes(moonName)).name;
 }
 
 
